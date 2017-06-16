@@ -1,0 +1,51 @@
+   1               		.file	"main.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+   9               		.text
+  10               	.Ltext0:
+  69               	.global	main
+  71               	main:
+   1:main.c        **** #include <avr/io.h>
+   2:main.c        **** #include <util/delay.h>
+   3:main.c        **** 
+   4:main.c        **** 
+   5:main.c        **** int main(void)
+   6:main.c        **** {
+  72               	ain, @function
+  73               	main:
+  75               	.LM0:
+  76               	.LFBB1:
+   7:main.c        ****   DDRC = 0xff;; //Makes first pin of PORTC as Output
+  77               	BB1
+  78               	.LM0:
+  79 0000 8FEF      	.LFBB1:
+  80 0002 84BB      	/* prologue: function */
+   8:main.c        ****   DDRD =0x00;//Makes first pin of PORTD as Input
+  81               	gue: function */
+  82               	/* frame size = 0 */
+  84               	.LM1:
+   9:main.c        ****   while(1) //infinite loop
+  10:main.c        ****   {
+  11:main.c        ****     if(PIND & 0x00 == 1) //If switch is pressed
+  85               	-.LFBB1
+  86               	.LM1:
+  87 0006 80B3      		ldi r24,lo8(-1)
+  88 0008 00C0      		out 52-32,r24
+  90               	.LM2:
+  91               		out 49-32,__zero_reg__
+  92               	.L2:
+DEFINED SYMBOLS
+                            *ABS*:00000000 main.c
+C:\Users\ADMIN\AppData\Local\Temp/ccGe1lmw.s:2      *ABS*:0000003f __SREG__
+C:\Users\ADMIN\AppData\Local\Temp/ccGe1lmw.s:3      *ABS*:0000003e __SP_H__
+C:\Users\ADMIN\AppData\Local\Temp/ccGe1lmw.s:4      *ABS*:0000003d __SP_L__
+C:\Users\ADMIN\AppData\Local\Temp/ccGe1lmw.s:5      *ABS*:00000034 __CCP__
+C:\Users\ADMIN\AppData\Local\Temp/ccGe1lmw.s:6      *ABS*:00000000 __tmp_reg__
+C:\Users\ADMIN\AppData\Local\Temp/ccGe1lmw.s:7      *ABS*:00000001 __zero_reg__
+C:\Users\ADMIN\AppData\Local\Temp/ccGe1lmw.s:71     .text:00000000 main
+
+NO UNDEFINED SYMBOLS
